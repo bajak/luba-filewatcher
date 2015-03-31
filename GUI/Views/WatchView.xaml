@@ -1,0 +1,116 @@
+﻿<Window x:Class="Filewatcher.GUI.WatchView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:p="clr-namespace:Filewatcher.GUI.Properties" 
+        xmlns:local="clr-namespace:Filewatcher.GUI"
+        xmlns:io="clr-namespace:System.IO;assembly=System" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Name="WatchViewWindow" mc:Ignorable="d" 
+        Background="#FF595959" Title="Add Watch" Width="600" Height="Auto" WindowStyle="ToolWindow" SizeToContent="Height" ResizeMode="NoResize"
+        d:DataContext="{d:DesignInstance local:WatchViewModel}" Closing="WindowClosing">
+    <Window.Resources>
+        <local:EnumValueConverter x:Key="EnumValueConverter"/>
+    </Window.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Border BorderBrush="#383838" Grid.Row="0" BorderThickness="1" CornerRadius="4">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0"  Margin="5, 0, 5, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="105" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="{x:Static p:Resources.WATCH_LABEL_NAME}" Grid.Row="2" Grid.Column="0"></Label>
+                    <TextBox Text="{Binding  Path=Watch.Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" Grid.Row="2" Grid.Column="1" Margin="2, 3, 2, 3"></TextBox>
+                </Grid>
+                <Grid Grid.Row="1" Margin="5, 0, 5, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="105" />
+                        <ColumnDefinition Width="8*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="{x:Static p:Resources.WATCH_LABEL_WATCHFOLDER}" Grid.Row="0" Grid.Column="0"></Label>
+                    <TextBox Text="{Binding Path=Watch.WatchFolder, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" Grid.Row="0" Grid.Column="1" Margin="2, 3, 2, 3"></TextBox>
+                    <Button Content="{x:Static p:Resources.WATCH_LABEL_SELECTFOLDER}" Command="{Binding Path=SelectWatchFolderCommand}" Grid.Row="0" Grid.Column="2" Margin="2"></Button>
+                    <Label Content="{x:Static p:Resources.WATCH_LABEL_PROCESS}" Grid.Row="1" Grid.Column="0"></Label>
+                    <TextBox Text="{Binding Path=Watch.Process, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" Grid.Row="1" Grid.Column="1" Margin="2, 3, 2, 3"></TextBox>
+                    <Button Content="{x:Static p:Resources.WATCH_LABEL_SELECTFILE}" Command="{Binding SelectProcessFileCommand}" Grid.Row="1" Grid.Column="2" Margin="2"></Button>
+                    <Label Content="{x:Static p:Resources.WATCH_LABEL_WORKINGFOLDER}" Grid.Row="2" Grid.Column="0"></Label>
+                    <TextBox Text="{Binding Path=Watch.WorkingFolder, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" Grid.Row="2" Grid.Column="1" Margin="2, 3, 2, 3"></TextBox>
+                    <Button Content="{x:Static p:Resources.WATCH_LABEL_SELECTFOLDER}" Command="{Binding SelectWorkingFolderCommand}" Grid.Row="2" Grid.Column="2" Margin="2"></Button>
+                    <Label Content="{x:Static p:Resources.WATCH_LABEL_PARAMETER}" Grid.Row="3" Grid.Column="0"></Label>
+                    <TextBox Name="ParameterTxtBox" Text="{Binding Watch.Parameter}" Grid.Row="3" Grid.Column="1" Margin="2, 3, 2, 3"></TextBox>
+                    <Button Name="InsertMacroBtn1" Command="{Binding InsertMacroCommand1}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}"  Grid.Row="3" Grid.Column="2" Margin="2" Content="{x:Static p:Resources.WATCH_LABEL_MACRO}"></Button>
+                    <Label Content="{x:Static p:Resources.WATCH_LABEL_OUTPUTPATH}" Grid.Row="4" Grid.Column="0"></Label>
+                    <TextBox Name="OutputTxtBox" Text="{Binding Watch.OutputPath, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" Grid.Row="4" Grid.Column="1" Margin="2, 3, 2, 3"></TextBox>
+                    <Button Name="InsertMacroBtn2" Command="{Binding InsertMacroCommand2}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}"  Grid.Row="4" Grid.Column="2" Margin="2" Content="{x:Static p:Resources.WATCH_LABEL_MACRO}"></Button>
+                </Grid>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Border Margin="0, 10, 5, 10" Grid.Column="0" BorderBrush="#383838" BorderThickness="1" CornerRadius="4">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <CheckBox Content="{x:Static p:Resources.WATCH_LABEL_INCLUDESUBFOLDER}" IsChecked="{Binding Path=Watch.IncludeSubfolders, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" Margin="5,5,5,5" Grid.Row="0" Grid.Column="0"></CheckBox>
+                    <CheckBox Content="{x:Static p:Resources.WATCH_LABEL_USESHELLEXECUTE}" IsChecked="{Binding Path=Watch.UseShellExecute, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" Margin="5,5,5,5" Grid.Row="0" Grid.Column="1"></CheckBox>
+                    <CheckBox Content="{x:Static p:Resources.WATCH_LABEL_PROCESSHIDDEN}" IsChecked="{Binding Path=Watch.IsProcessHidden, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" Margin="5,5,5,5" Grid.Row="1"  Grid.Column="0"></CheckBox>
+                    <CheckBox Content="{x:Static p:Resources.WATCH_LABEL_LOGOUTPUT}" IsChecked="{Binding Path=Watch.LogOutput, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" Margin="5,5,5,5" Grid.Row="1"  Grid.Column="1"></CheckBox>
+                </Grid>
+            </Border>
+            <Border Margin="5, 10, 0, 10"  Grid.Column="1" BorderBrush="#383838" BorderThickness="1" CornerRadius="4">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="{x:Static p:Resources.WATCH_LABEL_INCLUDEEXTENSION}" Margin="5,0,0,0"  Grid.Row="0" Grid.Column="0"></Label>
+                    <TextBox Text="{Binding Path=Watch.IncludeExtension, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" Grid.Row="0" Grid.Column="1" Margin="3,3,5,3"></TextBox>
+                    <Label Content="{x:Static p:Resources.WATCH_LABEL_EXCLUDEEXTENSION}" Margin="5,0,0,0" Grid.Row="1" Grid.Column="0"></Label>
+                    <TextBox Text="{Binding Path=Watch.ExcludeExtension, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" Grid.Row="1" Grid.Column="1" Margin="3,3,5,3"></TextBox>
+                </Grid>
+            </Border>
+        </Grid>
+        <Border Grid.Row="2"  BorderBrush="#383838" BorderThickness="1" CornerRadius="4">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="34" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Content="{x:Static p:Resources.WATCH_LABEL_SAVE}" Command="{Binding SaveCommand}" Grid.Column="0" Margin="0, 5, 2.5 , 5"></Button>
+                <Button Content="{x:Static p:Resources.WATCH_LABEL_CANCEL}" Command="{Binding CancelCommand}" Grid.Column="1" Margin="2.5, 5, 0 , 5"></Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

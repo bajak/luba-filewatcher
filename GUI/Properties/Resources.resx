@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MACRO_LABEL_TEXT_FILENAME" xml:space="preserve">
+    <value>Example : ObservedFile.txt</value>
+  </data>
+  <data name="MACRO_LABEL_TEXT_FILEPATH" xml:space="preserve">
+    <value>Example : C:\Folder1\Folder2\ObservedFile.txt</value>
+  </data>
+  <data name="MACRO_LABEL_TEXT_FOLDERNAME" xml:space="preserve">
+    <value>Example : Folder2</value>
+  </data>
+  <data name="MACRO_LABEL_TEXT_FOLDERPATH" xml:space="preserve">
+    <value>Example : C:\Folder1\Folder2</value>
+  </data>
+  <data name="MACRO_LABEL_TITLE_FILENAME" xml:space="preserve">
+    <value>Variable : $TargetFileName$</value>
+  </data>
+  <data name="MACRO_LABEL_TITLE_FILEPATH" xml:space="preserve">
+    <value>Variable : $TargetFilePath$</value>
+  </data>
+  <data name="MACRO_LABEL_TITLE_FOLDERNAME" xml:space="preserve">
+    <value>Variable : $TargetFolderName$</value>
+  </data>
+  <data name="MACRO_LABEL_TITLE_FOLDERPATH" xml:space="preserve">
+    <value>Variable : $TargetFolderPath$</value>
+  </data>
+  <data name="MAIN_LABEL_HISTORY" xml:space="preserve">
+    <value> History </value>
+  </data>
+  <data name="MAIN_LABEL_HISTORY_COLUMN_ENDDATE" xml:space="preserve">
+    <value>Exit Date</value>
+  </data>
+  <data name="MAIN_LABEL_HISTORY_COLUMN_EXITCODE" xml:space="preserve">
+    <value>Exit Code</value>
+  </data>
+  <data name="MAIN_LABEL_HISTORY_COLUMN_NAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MAIN_LABEL_HISTORY_COLUMN_STARTDATE" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="MAIN_LABEL_HISTORY_COLUMN_TARGETPATH" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="MAIN_LABEL_HISTORY_DELETE" xml:space="preserve">
+    <value>Delete History/s</value>
+  </data>
+  <data name="MAIN_LABEL_HISTORY_DELETEALL" xml:space="preserve">
+    <value>Delete All History</value>
+  </data>
+  <data name="MAIN_LABEL_HISTORY_TOOLTIP" xml:space="preserve">
+    <value>Hint : right click to edit history items</value>
+  </data>
+  <data name="MAIN_LABEL_INFORMATION" xml:space="preserve">
+    <value> Information </value>
+  </data>
+  <data name="MAIN_LABEL_OPTIONS" xml:space="preserve">
+    <value> Options </value>
+  </data>
+  <data name="MAIN_LABEL_OUTPUT" xml:space="preserve">
+    <value> Output </value>
+  </data>
+  <data name="MAIN_LABEL_WATCH" xml:space="preserve">
+    <value>   Watch   </value>
+  </data>
+  <data name="MAIN_LABEL_WATCH_ADDITEM" xml:space="preserve">
+    <value>Add Watch</value>
+  </data>
+  <data name="MAIN_LABEL_WATCH_COLUMN_EXECUTABLE" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="MAIN_LABEL_WATCH_COLUMN_EXTENSION" xml:space="preserve">
+    <value>Ext</value>
+  </data>
+  <data name="MAIN_LABEL_WATCH_COLUMN_Watch" xml:space="preserve">
+    <value>Watch</value>
+  </data>
+  <data name="MAIN_LABEL_WATCH_COLUMN_FOLDER" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="MAIN_LABEL_WATCH_COLUMN_NAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MAIN_LABEL_WATCH_COLUMN_PARAMETER" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="MAIN_LABEL_WATCH_DELETEITEMS" xml:space="preserve">
+    <value>Delete Watch/s</value>
+  </data>
+  <data name="MAIN_LABEL_WATCH_DISABLED" xml:space="preserve">
+    <value>Disable Watch</value>
+  </data>
+  <data name="MAIN_LABEL_WATCH_EDITITEM" xml:space="preserve">
+    <value>Edit Action</value>
+  </data>
+  <data name="MAIN_LABEL_WATCH_ENABLED" xml:space="preserve">
+    <value>Enable Action</value>
+  </data>
+  <data name="MAIN_LABEL_WATCH_TOOLTIP" xml:space="preserve">
+    <value>Hint : right click to add or edit watch items</value>
+  </data>
+  <data name="MAIN_LABEL_OPTIONS_SAVEHISTORIES" xml:space="preserve">
+    <value>Save Histories to database</value>
+  </data>
+  <data name="WATCH_DEFAULT_NAME" xml:space="preserve">
+    <value>Default Name</value>
+  </data>
+  <data name="WATCH_DEFAULT_PARAMETER" xml:space="preserve">
+    <value>/T:C0 /K Echo File access on '$TargetFilePath$'</value>
+  </data>
+  <data name="WATCH_ERROR_EXTENSION" xml:space="preserve">
+    <value>Error : value must contain a '.' character</value>
+  </data>
+  <data name="WATCH_ERROR_FILTER" xml:space="preserve">
+    <value>Error : a option must be checked</value>
+  </data>
+  <data name="WATCH_ERROR_FOLDER" xml:space="preserve">
+    <value>Error : folder does not exists</value>
+  </data>
+  <data name="WATCH_ERROR_NAME_ASCII" xml:space="preserve">
+    <value>Error : value cannot contain not ascii</value>
+  </data>
+  <data name="WATCH_ERROR_NAME_EMPTY" xml:space="preserve">
+    <value>Error : value cannot be empty</value>
+  </data>
+  <data name="WATCH_ERROR_PROCESS" xml:space="preserve">
+    <value>Error : file does not exists</value>
+  </data>
+  <data name="WATCH_GENERIC_ALLFILES" xml:space="preserve">
+    <value>All Files</value>
+  </data>
+  <data name="WATCH_LABEL_CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="WATCH_LABEL_INCLUDEEXTENSION" xml:space="preserve">
+    <value>Include Extension : </value>
+  </data>
+  <data name="WATCH_LABEL_FILECHANGE" xml:space="preserve">
+    <value>Filename Change</value>
+  </data>
+  <data name="WATCH_LABEL_WATCH" xml:space="preserve">
+    <value>Watch :  </value>
+  </data>
+  <data name="WATCH_LABEL_FOLDERCHANGE" xml:space="preserve">
+    <value>Foldername Change</value>
+  </data>
+  <data name="WATCH_LABEL_INCLUDESUBFOLDER" xml:space="preserve">
+    <value>Include Subfolders</value>
+  </data>
+  <data name="WATCH_LABEL_LASTACCESS" xml:space="preserve">
+    <value>Last Access</value>
+  </data>
+  <data name="WATCH_LABEL_LASTWRITE" xml:space="preserve">
+    <value>Last Write</value>
+  </data>
+  <data name="WATCH_LABEL_MACRO" xml:space="preserve">
+    <value> Macro </value>
+  </data>
+  <data name="WATCH_LABEL_NAME" xml:space="preserve">
+    <value>Name :</value>
+  </data>
+  <data name="WATCH_LABEL_OTHER" xml:space="preserve">
+    <value>Other :  </value>
+  </data>
+  <data name="WATCH_LABEL_PARAMETER" xml:space="preserve">
+    <value>Parameter :</value>
+  </data>
+  <data name="WATCH_LABEL_PROCESS" xml:space="preserve">
+    <value>Process Filepath :</value>
+  </data>
+  <data name="WATCH_LABEL_PROCESSHIDDEN" xml:space="preserve">
+    <value>Process Hidden</value>
+  </data>
+  <data name="WATCH_LABEL_SAVE" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="WATCH_LABEL_SELECTFILE" xml:space="preserve">
+    <value> Select File </value>
+  </data>
+  <data name="WATCH_LABEL_SELECTFOLDER" xml:space="preserve">
+    <value> Select Folder </value>
+  </data>
+  <data name="WATCH_LABEL_USESHELLEXECUTE" xml:space="preserve">
+    <value>Shell Execute</value>
+  </data>
+  <data name="WATCH_LABEL_WATCHFOLDER" xml:space="preserve">
+    <value>Watch Folder :</value>
+  </data>
+  <data name="WATCH_LABEL_WORKINGFOLDER" xml:space="preserve">
+    <value>Working Folder : </value>
+  </data>
+  <data name="MAIN_LABEL_WATCH_COLUMN_FILTER" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="WATCH_LABEL_FILTER" xml:space="preserve">
+    <value>File Filters :  </value>
+  </data>
+  <data name="MAIN_LABEL_OPTIONS_OUTPUT_SELECTFILE" xml:space="preserve">
+    <value>    Select File    </value>
+  </data>
+  <data name="MAIN_LABEL_OPTIONS_SAVEOUTPUT" xml:space="preserve">
+    <value>Text Ouput Location : </value>
+  </data>
+  <data name="MAIN_ERROR_OUTPUTPATH" xml:space="preserve">
+    <value>Error : folder does not exists</value>
+  </data>
+  <data name="MAIN_LABEL_OPTIONS_SHOWPOPUPS" xml:space="preserve">
+    <value>Show information popups</value>
+  </data>
+  <data name="BALLOON_LABEL_HEADER" xml:space="preserve">
+    <value>Luba Filewatcher</value>
+  </data>
+  <data name="BALLOON_LABEL_NAME" xml:space="preserve">
+    <value>Name : </value>
+  </data>
+  <data name="BALLOON_LABEL_TARGET" xml:space="preserve">
+    <value>Source : </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MAIN_IMAGE_NOTIFYICON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Media\icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MAIN_LABEL_NOTIFYICON" xml:space="preserve">
+    <value>Luba Filewatcher</value>
+  </data>
+  <data name="MAIN_OPTIONS_OUTPUT_TEXTFILES" xml:space="preserve">
+    <value>Text Files</value>
+  </data>
+  <data name="SPLASH_LABEL_TIMELEFT" xml:space="preserve">
+    <value> Seconds left...</value>
+  </data>
+  <data name="MAIN_LABEL_OUTPUT_CLEAROUTPUT" xml:space="preserve">
+    <value>Clear Output</value>
+  </data>
+  <data name="MACRO_LABEL_TEXT_FILENAMENOEXT" xml:space="preserve">
+    <value>Example : ObservedFile</value>
+  </data>
+  <data name="MACRO_LABEL_TEXT_FILEPATHNOEXT" xml:space="preserve">
+    <value>Example : C:\Folder1\Folder2\ObservedFile</value>
+  </data>
+  <data name="MACRO_LABEL_TITLE_FILENAMENOEXT" xml:space="preserve">
+    <value>Variable : $TargetFileNameNoExt$</value>
+  </data>
+  <data name="MACRO_LABEL_TITLE_FILEPATHNOEXT" xml:space="preserve">
+    <value>Variable : $TargetFilePathNoExt$</value>
+  </data>
+  <data name="WATCH_LABEL_EXCLUDEEXTENSION" xml:space="preserve">
+    <value>Exclude Regex  : </value>
+  </data>
+  <data name="WATCH_LABEL_OUTPUTPATH" xml:space="preserve">
+    <value>Output Filepath : </value>
+  </data>
+  <data name="WARNINGMESSAGE_TEXT_SHELLEXECUTE" xml:space="preserve">
+    <value>The "Shell Execute" option is enabled. The process output can not be redirected.</value>
+  </data>
+  <data name="WARNINGMESSAGE_TITLE" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="WATCH_ERROR_EXCLUDEEXTENSION" xml:space="preserve">
+    <value>Error : invalid regular expression</value>
+  </data>
+  <data name="WATCH_ERROR_OUTPUTPATH" xml:space="preserve">
+    <value>Error : should be empty or a valid filepath</value>
+  </data>
+  <data name="WATCH_LABEL_LOGOUTPUT" xml:space="preserve">
+    <value>Log Output</value>
+  </data>
+  <data name="WARNINGMESSAGE_TEXT_OUTPUTPATH" xml:space="preserve">
+    <value>The "Output Filepath" option is enabled. The process output will not shown.</value>
+  </data>
+</root>
